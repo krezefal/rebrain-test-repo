@@ -99,7 +99,7 @@ $cool-tool list
 
 You can use `--verbose` flag to get more detailed output, e.g.:
 
-|   VM ID  |  Distribulive |  CPU  | Memory | Storage | Expiration date
+|   VM ID  |       OS      |  CPU  | Memory | Storage | Expiration date
 |:--------:|:-------------:|:-----:|:------:|:-------:|:--------------:
 | db3c1097 |   CentOS 7    |   4   |  4 GB  |  30 GB  |   2022-12-15
 | 36f39e3a |   Fedora 35   |   4   |  3 GB  |  10 GB  |   2022-12-15
