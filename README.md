@@ -7,19 +7,19 @@
 **Repository for The Coolest Project**
 
 ## Description
-This is a very detailed description for [The Coolest Project](https://gitlab.rebrainme.com/devops_users_repos/4556/rebrain-devops-task1). Imagine, that this project is a cli (_command-line interface_) client-server tool, that allows user to perform their tasks using remote resources, namely with virtual machines. Our system can allocate new resources using `oVirt` virtualisation.
+Imagine that this project is a client-server cli (_command line interface_) application specially developed for the Coolest Startup, that allows users to perform their tasks using remote resources, namely using virtual machines. This app uses the `oVirt` API since the storage allocates new resources using `oVirt` virtualisation.
 
-This tool has been developed to automate users' access to remote capacities without disturbing the Devops specialist. Also exploiting this tool by user **guarantees the safety and consistency of both each virtual machine and the entire Ovirt system**. Using this tool user can perform the following things:
-- Authorizing in remote system and get access to personal pool by the unique token;
+This tool has been developed to automate users' access to remote capacities without disturbing the Devops specialist. Also exploiting this tool by the user **guarantees the safety and consistency of both each virtual machine and the entire oVirt system deployed on the storage**. Using this tool user can perform the following things:
+- Authorizing in remote system and get access to personal pool of VMs by a unique token;
 - Leasing new VMs by specifying:
     - Linux distro (available: `RedHat`, `Debian`, `Fedora`, `CentOS`)
     - Memory (from 512MB to 4GB included)
     - Storage space (from 10GB to 30GB included)
     - CPU (from 1 to 4 included)
     - Leasing time (**max leasing time = 1 month**)
-- Deleting its own VMs (and freeing up the remote resources);
+- Deleting its own VMs (therefore freeing up the storage resources);
 - Using VMs until their expiration date;
-- Viewing your VMs list.
+- Viewing his VMs list.
 
 This Coolest tool may be compiled as a stand-alone binary using `Golang`.
 
@@ -49,7 +49,7 @@ You can install this tool using most Linux package managers, such as `dpkg`, `yu
 sudo dnf install cool-tool
 ```
 
-But you can also install it by cloning this repo and build the binary manually (see section **Builbing** below):
+But you can also install it by cloning this repo and build the binary manually (see the section **Builbing** below):
 
 ```
 git clone git@gitlab.rebrainme.com:devops_users_repos/4556/rebrain-devops-task1.git
@@ -89,7 +89,7 @@ $cool-tool lease --name <new-vm-1> --distro <distro> --memory <amount of memory>
 
 > Arguments `name` and `time` are optional. Default name for VM is *new-vm-<#>* and default leasing time is **_1 day_**.
 
-To view list of your VMs execute
+To view a list of your VMs, execute
 
 ```
 $cool-tool list
@@ -97,7 +97,7 @@ $cool-tool list
 
 > Maximum amount of VMs = 5
 
-To remove VM whose inspiration date has not yet come with
+To remove a VM whose expiration date has not yet come, execute
 
 ```
 $cool-tool remove <vm-id>
